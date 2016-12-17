@@ -28,7 +28,7 @@ namespace parking.Controllers
         }
 
         // GET: NearbyParking
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(double latitude, double longitude)
         {
             var allParkingLots = (await db.ParkingLots
                 .OrderBy(pl => pl.Name)

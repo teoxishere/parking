@@ -12,10 +12,11 @@ function initMap() {
 }
 
 function placeMarkers() {
-//    alert("im placing markers!!!");
+    //    alert("im placing markers!!!");
+    var myLat = 44.33, myLng = 23.44;
     $.ajax({
         type: 'GET',
-        url: '/NearbyParking',
+        url: '/NearbyParking?latitude=' + myLat + '&longitude=' + myLng,
         success: function (response) {
             console.log(response);
             $.each(response, function (i, item) {
