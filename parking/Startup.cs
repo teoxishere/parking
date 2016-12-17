@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin;
+﻿using AutoMapper;
+using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
