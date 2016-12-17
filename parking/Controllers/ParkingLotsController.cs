@@ -14,7 +14,12 @@ namespace parking.Controllers
     [Authorize]
     public class ParkingLotsController : Controller
     {
-        private Context db = new Context();
+        private readonly Context db; //readonly TODO
+
+        public ParkingLotsController(Context injectedDb)
+        {
+            db = injectedDb;
+        }
 
         // GET: ParkingLots
         public async Task<ActionResult> Index()
