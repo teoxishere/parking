@@ -158,6 +158,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\NearbyParkingController.cs" />
     <Compile Include="Controllers\ParkingLotsController.cs" />
     <Compile Include="Models\Auth\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
@@ -230,6 +231,7 @@
     <Content Include="Views\ParkingLots\Details.cshtml" />
     <Content Include="Views\ParkingLots\Edit.cshtml" />
     <Content Include="Views\ParkingLots\Index.cshtml" />
+    <Content Include="Views\NearbyParking\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
