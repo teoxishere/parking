@@ -161,6 +161,7 @@
     <Compile Include="Controllers\NearbyParkingController.cs" />
     <Compile Include="Controllers\ParkingLotsController.cs" />
     <Compile Include="Models\Auth\ChallengeResult.cs" />
+    <Compile Include="Models\TOs\ParkingLotForMap.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">

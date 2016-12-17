@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using parking.Models.Domain;
 using System.Data.Entity.Infrastructure;
+using parking.Models.TOs;
 
 namespace parking.Controllers
 {   
@@ -22,15 +23,14 @@ namespace parking.Controllers
         {
             var allParkingLots = await db.ParkingLots
                 .OrderBy(pl => pl.Name)
-                .Select(pl => new ParkingLot
+                .Select(pl => new ParkingLotForMap
                 {
                     Id = pl.Id,
                     Name = pl.Name,
                     Latitude = pl.Latitude,
-                    Longitude=pl.Longitude
+                    Longitude = pl.Longitude
                 })
                 .ToListAsync();
-          //  return View(await db.ParkingLots.ToListAsync());
             return Json(allParkingLots, JsonRequestBehavior.AllowGet);
         }
     }
